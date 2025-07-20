@@ -1,0 +1,71 @@
+{
+	"name": "@karxys/http-framework",
+	"version": "1.0",
+	"description": "The framework for KARXYS HTTP-only bots",
+	"author": "@karxys",
+	"license": "Apache-2.0",
+	"main": "dist/esm/index.js",
+	"module": "dist/esm/index.js",
+	"types": "dist/esm/index.d.ts",
+	"type": "module",
+	"exports": {
+		"import": {
+			"types": "./dist/esm/index.d.ts",
+			"default": "./dist/esm/index.js"
+		}
+	},
+	"sideEffects": false,
+	"scripts": {
+		"test": "vitest run",
+		"build": "tsup",
+		"watch": "tsup --watch",
+		"typecheck": "tsc -p tsconfig.eslint.json",
+		"lint": "eslint src --ext ts --fix -c ../../package.json",
+		"prepack": "yarn build",
+		"bump": "cliff-jumper"
+	},
+	"dependencies": {
+		"@discordjs/builders": "^1.11.2",
+		"@discordjs/collection": "^2.1.1",
+		"@discordjs/rest": "^2.5.1",
+		"@discordjs/util": "^1.1.1",
+		"@sapphire/pieces": "^4.4.1",
+		"@sapphire/result": "^2.7.2",
+		"@sapphire/utilities": "^3.18.2",
+		"@vladfrangu/async_event_emitter": "^2.4.6",
+		"discord-api-types": "0.38.16"
+	},
+	"devDependencies": {
+		"@favware/cliff-jumper": "^6.0.0",
+		"@vitest/coverage-v8": "^3.2.4",
+		"tsup": "^8.5.0",
+		"typescript": "~5.8.3",
+		"vitest": "^3.2.4"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/krebinkkj/karxys-components.git",
+		"directory": "packages/http-framework"
+	},
+	"files": [
+		"dist/"
+	],
+	"engines": {
+		"node": ">=18"
+	},
+	"keywords": [
+		"discord",
+		"api",
+		"http",
+		"karxys",
+		"typescript",
+		"ts",
+		"yarn"
+	],
+	"bugs": {
+		"url": "https://github.com/krebinkkj/karxys-components/issues"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
